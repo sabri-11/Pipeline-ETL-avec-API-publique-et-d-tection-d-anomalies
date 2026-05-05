@@ -13,7 +13,7 @@ def save_tosqlite(df, table_name="exchange_rates", db_name="../bdd/database.db")
 
     try:
         df.to_sql(table_name, conn, if_exists="replace", index=False)
-        print(f"Données de la table {table_name} chargées dans sqlite\n")
+        print(f"Données de la table {table_name} chargées dans sqlite")
 
     finally: 
         conn.close()
