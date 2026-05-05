@@ -24,13 +24,10 @@ def extract_data_date(date_debut, date_fin, base="EUR", target="USD,GBP"):
     
 def ordonner_data(data):
     df = pd.DataFrame.from_dict(data['rates'], orient="index")
-    print(df.head())
     df = df.reset_index().rename(columns={"index":"date"})
-    print(df.head())
+
+    return df
 
 
-if __name__ == "__main__":
-    data = extract_data_date("2026-01-01", "2026-05-03")
-    if data:
-        ordonner_data(data)
+
     
