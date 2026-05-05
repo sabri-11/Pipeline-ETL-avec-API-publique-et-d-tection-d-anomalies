@@ -2,3 +2,4 @@ venv/
 .venv/
 rapport/
 bdd/
+__pycache__/
