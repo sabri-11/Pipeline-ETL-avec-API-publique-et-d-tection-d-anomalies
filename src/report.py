@@ -1,7 +1,12 @@
 import pandas as pd
+import os
 
 def generate_html(df, filename="../rapport/report.html"): 
 
+    dossier = os.path.dirname(filename)
+    if dossier: 
+        os.makedirs(dossier, exist_ok=True)
+    
     table_html = df.to_html(classes='mystyle', index=False)
     start_date = df["date"].min()
     end_date = df["date"].max()
@@ -32,6 +37,10 @@ def generate_html(df, filename="../rapport/report.html"):
 
 
 def generate_html_anomalies(anomalies_df, filename="../rapport/anomalies.html"):
+
+    dossier = os.path.dirname(filename)
+    if dossier: 
+        os.makedirs(dossier, exist_ok=True)
 
     table_html = anomalies_df.to_html(classes='mystyle', index=False)
 

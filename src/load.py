@@ -1,8 +1,13 @@
 import sqlite3
 import pandas as pd
+import os
 
 
 def save_tosqlite(df, table_name="exchange_rates", db_name="../bdd/database.db"):
+
+    dossier = os.path.dirname(db_name)
+    if dossier: 
+        os.makedirs(dossier, exist_ok=True)
 
     conn = sqlite3.connect(db_name)
 
