@@ -15,7 +15,8 @@ def detect_anomaly(df, columns="usd_pct_change"):
 
     df["explication"] = df[columns].apply(get_reason, args=(lower_bound, upper_bound))
 
-    print(df[df["is_anomaly"]==True])  # affiche uniquement les valeures anormales 
+    # print(df[df["is_anomaly"]==True])  # affiche uniquement les valeures anormales 
+
     return df
 
 

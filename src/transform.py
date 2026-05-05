@@ -26,8 +26,10 @@ def clean_data(df):
 
     return df
 
+
 def enrichir_data(df): 
     df["usd_pct_change"] = round(df["USD"].pct_change() * 100, 2)
     # print(df.head())
-
     return df
+
+
