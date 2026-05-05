@@ -3,3 +3,4 @@ venv/
 rapport/
 bdd/
 __pycache__/
+*.pyc
